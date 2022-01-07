@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUN Timer</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Moderated Caucus - <span id="modTitle">Insert Topic</span></h1> 
+        <h2>Information</h2>
+        <form action="">
+            <label for="topic">Topic:</label>
+            <input type="text" id="topic"><br><br>
+            <label for="totalTime">Total time (sec):</label>
+            <input type="number" id="totalTime"><br><br>
+            <label for="speakingTime">Speaking time (sec):</label>
+            <input type="number" id="speakingTime"><br><br>
+        </form>
+    </div>
+
+    <div class="speaker-header" id="speaker-header">
+        <h2>Speakers</h2>
+        <input class="input" type="text" id="countryInput" placeholder="Country...">
+        <button class="addButton" id="countryAddButton" onclick="checkCountryInput();" >Add</button>
+    </div>
+
+    <ul class="speakers">
+
+    </ul>
+
+    <div class="container" id="container"> 
+        <!-- <div class="country">
+            <input type="text" class="countryInput" value="China">
+            <button class="editButton">EDIT</button>
+            <button class="removeButton">X</button>
+        </div> -->
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
