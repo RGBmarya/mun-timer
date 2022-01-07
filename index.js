@@ -11,7 +11,6 @@ topic.addEventListener("keydown", event => {
 })
 
 
-
 const totalTime = document.getElementById("totalTime");
 const speakingTime = document.getElementById("speakingTime");
 
