@@ -40,11 +40,21 @@ speakingTime.addEventListener("keydown", event =>{
 const addButton = document.getElementById("countryAddButton");
 let input = document.getElementById("countryInput");
 const container = document.querySelector(".container");
+let curSpeakerNum = 1; 
 
 //country class represents a div element in "container"
 class country{
     constructor(country){
-        this.createDiv(country);
+        if(!totalTime.value || !speakingTime.value){ //check if user has entered total time and speaking time - necessary to calculate max speakers
+            alert("Enter total time and speaking time");
+        }
+        else if(curSpeakerNum <= totalTime.value / speakingTime.value){ //checks if max speaker limit has not been reached
+            this.createDiv(country);
+            curSpeakerNum++;
+        }
+        else{
+            alert("Max speakers reached");
+        }
     }
 
     createDiv(itemName){
@@ -92,6 +102,7 @@ class country{
 
     remove(country){
         container.removeChild(country);
+        curSpeakerNum--;
     }
 }
 
