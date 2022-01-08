@@ -40,6 +40,7 @@ speakingTime.addEventListener("keydown", event =>{
 const addButton = document.getElementById("countryAddButton");
 let input = document.getElementById("countryInput");
 const container = document.querySelector(".container");
+const speakerCounter = document.getElementById("speakerCounter");
 let curSpeakerNum = 1; 
 
 //country class represents a div element in "container"
@@ -50,6 +51,7 @@ class country{
         }
         else if(curSpeakerNum <= totalTime.value / speakingTime.value){ //checks if max speaker limit has not been reached
             this.createDiv(country);
+            speakerCounter.innerHTML = ` - ${curSpeakerNum} / ${totalTime.value / speakingTime.value}`; //update speaker counter
             curSpeakerNum++;
         }
         else{
