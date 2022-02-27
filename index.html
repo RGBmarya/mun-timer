@@ -12,11 +12,17 @@
         <h2>Information</h2>
         <form action="">
             <label for="topic">Topic:</label>
-            <input type="text" id="topic"><br><br>
+            <input type="text" id="topic">
+            <input type="button" value="Submit" onclick="setPage(document.getElementById('topic').value);"><br><br><br><br>
+
             <label for="totalTime">Total time (sec):</label>
-            <input type="number" id="totalTime"><br><br>
+            <input type="number" id="totalTime">
+            <!-- <input type="button" value="Submit" onclick="setPage(document.getElementById('topic').value);">
+             -->
+             <br><br>
             <label for="speakingTime">Speaking time (sec):</label>
-            <input type="number" id="speakingTime"><br><br>
+            <input type="number" id="speakingTime">
+            <input type="button" value="Submit" onclick="updateSpeakingTime();"><br><br>
         </form>
     </div>
 
@@ -33,6 +39,15 @@
             <button class="removeButton">X</button>
         </div> -->
     </div>
+
+    <div>
+        <h2>Time remaining</h2>
+        <p id="timer">2:00</p>
+        <button id="timerStartButton" onclick="startTimer();">Start</button>
+        <button id="timerResetButton" onclick="stopTimer();">Reset</button>
+
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>
